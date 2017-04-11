@@ -1,0 +1,17 @@
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ </head>
+ <body>
+   <div>
+     <ul>    
+      {% for image in images %}
+        <li>
+         <img width='20px' height='30px' src="/static/{{image.image_url}}"/> 
+        <li>    
+      {% endfor %}      
+     <!--  <img width='20px' height='30px' src="{{ url_for('static', filename ='uploads/Desert.jpg')}}"/>      -->
+     </ul>
+   </div>
+ </body>
+</html>

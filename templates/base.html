@@ -1,0 +1,34 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}
+Flasky
+{% endblock %}
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle"
+data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/">Flasky</a>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+</ul>
+</div>
+</div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container">
+{% block page_content %}{% endblock %}
+</div>
+{% endblock %}
+<!-- 这个模板的 content 块中只有一个 <div> 容器，其中包含了一个名为 page_content 的新的
+空块，块中的内容由衍生模板定义。
+现在，程序使用的模板继承自这个模板，而不直接继承自 Flask-Bootstrap 的基模板。通过
+继承 templates/base.html 模板编写自定义的 404 错误页面很简单 -->

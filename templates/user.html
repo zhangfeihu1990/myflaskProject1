@@ -1,0 +1,183 @@
+
+{% extends "bootstrap/base.html" %}
+{% block title %}Flasky{% endblock %}
+{% block navbar %}
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <script type="text/javascript" src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
+ 
+<script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+<script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+<script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+
+ <script type=text/javascript>
+</script>
+</head>
+
+<div class="navbar navbar-inverse" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle"
+data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/">Flasky</a>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+</ul>
+</div>
+</div>
+</div>
+{% endblock %}
+
+{{nav.mynavbar.render()}}
+
+{% block content %}
+<div class="container">
+<div class="page-header">
+
+<h1>Hello1, {{ name }}!</h1><img alt="" src="{{ url_for('static', filename = '58.png') }}">
+
+    {{ form.username }}
+    {{ form.email }}
+    {{ form.password }}
+    {{ form.confirm }}
+    {{ form.accept_tos }}
+</div>
+<div>
+<ul>
+<span style='display:block'>点击aaa和bbb调用ajax方法</span>
+<a onclick='a()' href="#" id='aaa'>aaa</a>
+<a onclick='b()' href="#">bbb</a>
+<form enctype='multipart/form-data' action='/upload_file' method='post'>
+    <input type='file' name='file'>
+    <input type='submit' value='上传'>
+</form>
+
+{% for person in persons %}
+ <li>{{person.name}}</li>
+ {% endfor %}
+ </ul>
+</div>
+</div>
+<!-- react -->
+<div id="example"></div>
+    <script type="text/babel">
+var HelloMessage = React.createClass({
+  getInitialState: function() {
+    return {value: 'Hello Runoob!'};
+  },
+  handleChange: function(event) {
+    
+    var val = $('#aaa').text();
+    console.log(1234+":"+val);
+    this.setState({value: val})
+  },
+  render: function() {
+    var value = this.state.value;
+    return <div>
+            <button onClick={this.handleChange}>点我</button>
+            <h4>{value}</h4>
+           </div>;
+  }
+});
+ReactDOM.render(
+  <HelloMessage />,
+  document.getElementById('example')
+);
+    </script>
+
+    <div id="ajax-example"></div>
+    <script type="text/babel">
+
+          var myStyle = {
+              fontSize: 100,
+              color: '#FF0000'
+                     
+          };
+
+      var TestAdd = React.createClass({
+        getInitialState: function() {
+          return {
+            myresult: ''            
+          };
+        },
+
+        componentDidMount: function() {
+         /* this.serverRequest = $.get(this.props.source,
+          {a:23,b:34}, 
+          function (result) {
+            console.log("2:"+result.result)
+            this.setState({
+              myresult: result.result,  
+            });
+          }.bind(this));*/
+
+        this.serverRequest=$.getJSON(
+           '/testajax2', 
+           {a:'1',b:'89'},
+           function(data){
+             alert(data.result);
+             this.setState({
+               myresult: data.result,  
+             });
+           }.bind(this));
+        return false;
+        },
+
+        componentWillUnmount: function() {
+          this.serverRequest.abort();
+        },
+
+        render: function() {
+          return (
+            <div style={myStyle}>
+                                                         结果为：{this.state.myresult} ：            
+            </div>
+          );
+        }
+      });
+
+      ReactDOM.render(
+        <TestAdd source="/testajax3" />,
+        document.getElementById('ajax-example')
+      );
+    </script>    
+<script>
+
+/* alert(123)
+alert($("#name1").val()) */
+
+function a(){
+	alert('callajax');
+	$.ajax({
+		url:'/testajax',
+		dataType:'json',
+		data:{a:'1',b:'2'},
+		async:false,
+		success:function(da){
+			alert('ok')
+		},
+		fail:function(data){alert('fail:'+data)}
+	    
+	})
+}
+
+function b(){
+      $.getJSON(
+       '/testajax2', 
+       {a:'1',b:'2'},
+       function(data){
+          alert(data.result);
+        }
+      );
+       return false;
+    }
+
+</script>
+{% endblock %}

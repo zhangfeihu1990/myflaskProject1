@@ -1,0 +1,95 @@
+
+{% extends "bootstrap/base.html" %}
+{% block title %}Flasky{% endblock %}
+{% block navbar %}
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <script type="text/javascript" src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
+ <script type=text/javascript>
+</script>
+</head>
+
+<div class="navbar navbar-inverse" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle"
+data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/">Flasky</a>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li><a href="/">Home</a></li>
+</ul>
+</div>
+</div>
+</div>
+{% endblock %}
+
+{{nav.mynavbar.render()}}
+
+{% block content %}
+<div class="container">
+<div class="page-header">
+
+<h1>Hello1, {{ name }}!</h1><img alt="" src="{{ url_for('static', filename = '58.png') }}">
+
+    {{ form.username }}
+    {{ form.email }}
+    {{ form.password }}
+    {{ form.confirm }}
+    {{ form.accept_tos }}
+</div>
+<div>
+<ul>
+<span style='display:block'>点击aaa和bbb调用ajax方法</span>
+<a onclick='a()' href="#">aaa</a>
+<a onclick='b()' href="#">bbb</a>
+<form enctype='multipart/form-data' action='/upload_file' method='post'>
+    <input type='file' name='file'>
+    <input type='submit' value='上传'>
+</form>
+
+{% for person in persons %}
+ <li>{{person.name}}</li>
+ {% endfor %}
+ </ul>
+</div>
+</div>
+<script>
+
+/* alert(123)
+alert($("#name1").val()) */
+
+function a(){
+	alert('callajax');
+	$.ajax({
+		url:'/testajax',
+		dataType:'json',
+		data:{a:'1',b:'2'},
+		async:false,
+		success:function(da){
+			alert('ok')
+		},
+		fail:function(data){alert('fail:'+data)}
+	    
+	})
+}
+
+function b(){
+      $.getJSON(
+       '/testajax2', 
+       {a:'1',b:'2'},
+       function(data){
+          alert(data.result);
+        }
+      );
+       return false;
+    }
+
+</script>
+{% endblock %}
