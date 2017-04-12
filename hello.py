@@ -180,6 +180,12 @@ def testreact():
     print 'reacttest'
     render_template('testreact.html')
 
+@app.route('/testinhome')
+def testinhome():
+    print 'reacttest'
+    render_template('testreact.html')
+
+
 nav.init_app(app)  #nav bar    
 
 class NameForm(Form):
