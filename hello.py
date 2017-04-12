@@ -64,7 +64,8 @@ def index():
   person = session.query(Person).first()
   name = person.name
   persons = session.query(Person).all()
-  return render_template('user.html', form=form, name=name,persons=persons)
+  # return render_template('user.html', form=form, name=name,persons=persons)
+  return render_template('testreact.html')
 
 @app.route('/user/<name>')
 def user(name):
@@ -75,16 +76,16 @@ def user(name):
 def redir():
   return redirect('http://www.baidu.com')
 
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    form = RegistrationForm(request.form)
-    if request.method == 'POST' and form.validate():
-        user = User(form.username.data, form.email.data,
-                    form.password.data)
-        db_session.add(user)
-        flash('Thanks for registering')
-        return redirect(url_for('login'))
-    return render_template('register1.html', form=form)
+# @app.route('/register', methods=['GET', 'POST'])
+# def register():
+#     form = RegistrationForm(request.form)
+#     if request.method == 'POST' and form.validate():
+#         user = User(form.username.data, form.email.data,
+#                     form.password.data)
+#         db_session.add(user)
+#         flash('Thanks for registering')
+#         return redirect(url_for('login'))
+#     return render_template('register1.html', form=form)
 
 @app.route('/person', methods=['GET', 'POST'])
 def person():
@@ -174,7 +175,11 @@ def upload_file():
       print filename
       return redirect('/')    
     return redirect('/')
-      
+@app.route('/testreact')
+def testreact():
+    print 'reacttest'
+    render_template('testreact.html')
+
 nav.init_app(app)  #nav bar    
 
 class NameForm(Form):
