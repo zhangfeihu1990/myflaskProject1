@@ -23,8 +23,11 @@ def download(url,user_agent='wswp',numRetries=2,scrape_callback=None):
     allprice = soup.find_all('p',attrs={"class":"price"})
     for price in allprice:
         #print price.text.split('\t')
-        regx = re.compile(r'[0-9]')
-        price = regx.findall(str(price))
+        regx = re.compile(r'\￥[0-9]')
+        #price = regx.findall(str(price))
+        price = regx.match(str(price))
+        if price:
+            print price
         print price
 
     if scrape_callback:
