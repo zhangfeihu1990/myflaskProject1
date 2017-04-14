@@ -22,13 +22,13 @@ def download(url,user_agent='wswp',numRetries=2,scrape_callback=None):
     soup = BeautifulSoup(html,"html.parser")
     allprice = soup.find_all('p',attrs={"class":"price"})
     for price in allprice:
-        #print price.text.split('\t')
-        regx = re.compile(r'\￥[0-9]')
+        print price.text.split('\t')
+        #regx = re.compile(r'\￥[0-9]')
         #price = regx.findall(str(price))
-        price = regx.match(str(price))
-        if price:
-            print price
-        print price
+        #price = regx.match(str(price))
+        # if price:
+        #     print price
+        # print price
 
     if scrape_callback:
       links.extend(scrape_callback(html) or [])
@@ -37,8 +37,8 @@ def download(url,user_agent='wswp',numRetries=2,scrape_callback=None):
 
 class ScrapeCallback:
     def __init__(self):
-        self.writer = csv.writer(open('f:/houses.csv','w'))
-        #self.csv = open('f:/houses.csv','w')
+        self.writer = csv.writer(open('d:/houses.csv','w'))
+        #self.csv = open('d:/houses.csv','w')
         self.fields = ('price')
         self.writer.writerow(self.fields)
         #self.csv.write(self.fields)
@@ -48,8 +48,9 @@ class ScrapeCallback:
       row = []
       for price in allprice:
 
-        price1 = price.text.decode("utf-8")
+        #price1 = price.text.decode("utf-8")
         #self.csv.write(price)
+        price = price.text
         row.append(price)
         self.writer.writerow(row)
 
