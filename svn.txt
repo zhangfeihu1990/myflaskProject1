@@ -1,0 +1,94 @@
+张飞虎
+账号：zhangfeihu
+密码：fg4Fz_Vzu70u                   wljw1688
+
+REQ2105#[FC] 增加电梯产品代码 by张飞虎
+http://10.196.112.6:9080/web/
+4380880000000007
+http://219.141.211.14:9777/amoeba/login?year=&month=
+
+http://100.39.3.42:9999/zentao/project-bug-26-status,id_desc-0-120-20-1.html
+
+http://www.phaser-china.com/
+
+bin>
+mongod.exe --dbpath d:\data\db
+
+
+r个球分布在n-m个盒子中每个都不为空
+
+
+
+
+http://10.196.112.6:9080/web/policy/download.do?orderNo=2014080001201701000003&policyNo=432958a9f0024b749f8155781cdd930d&newOrderNo=0&classCode=01&channel=001&check=false
+border-bottom:1px solid red;margin-left: 30px;width:210px;margin-top:5px;margin-bottom:-10px
+else if("011J04".equals(kindcode)||"011J06".equals(kindcode)){
+				  if(Years>3){
+					  proOrder.getProKinds().get(i).setAmount(new BigDecimal(0));//大于3年不能投保
+				  }else{
+				      proOrder.getProKinds().get(i).setAmount(practicalValue);
+				  } 
+			  }
+                                <li>
+                                    <a >理赔流程</a>
+                                </li>
+                                <div class="sm_show hidden">
+                                 <img src="${ctx}/static/images/lipei_liucheng.png" width="100%" title="热销产品" style="margin-left: 5%"/>
+                                </div>
+
+ebusiness/webnew/publicservice/epolicyaction
+
+步步安心
+2014080001201702000076
+062017110143D06020544000050
+
+
+2016010401201702000015
+0615110143D0081J000141
+Ih8E%3D%0D%0A4IYtIdeBJofgXdDpl%2FCOSFhQAShDnJxWZzmMDa%2BwfILZm3tPzTIdghnkRudyXyFpsOuMHNE%2BGRzk%0D%0ANOCE%2FBWxtqlOuETog6sKkkeMmXU4dNnh74qSH8mFtZ6Uj9Lk2fkrJ9aPEDDbcvyboQ5cRjHEhCcd%0D%0Ac%2BoKcECzMTH4QIk
+家庭燃气
+2016041501201702000004
+0616110143D0083A000062
+CD%2Bw%3D%0D%0A4IYtIdeBJoe%2BoDhH8DGNFK2n0DHJPCG1%2FDvpsq85qlBnmmmVDvk%2Bq8nbrY5CAdQ1L%2B3XPEBG2dSJ%0D%0ACXO0IxWZeICA2pZNFALTIHHIR%2BIZd4pwTIARXZrKeKxgYhBBmP9BXmX3gb7EJg9SNWSXlCY8vARs%0D%0AFxp6fTwqm%2FVAXl9
+e家安心
+2016122601201702000052
+
+四海逍遥
+2015010002201702000006
+062017110143D06020554000007
+
+安租宝
+2015122101201702000020
+0615110143D0081J000142
+
+安居宝
+2015120701201702000020
+0615110143D0081J000143
+
+个人账户
+2016040601201702000005
+0616110143D0081K000060 
+
+电梯
+2016071801201702000005
+0616429801D0044T000074
+O9XI%3D%0D%0A4IYtIdeBJofeUUQwm5cIu%2B1x6De1APKoYqd%2Bd5ZsUo4t4SCfPGAj5npaJ7Ck0Le%2FbTGYL8EtXzEV%0D%0AEutQA73VamkzaZemuOWNIsXUnF3FoYqh%2BDQectCVPZBZajvgZsHMk9K9tL719wnoWXOgC3tMJf8f%0D%0AdJggKfP6Ji3xiEL
+华夏
+123456789001
+
+789001
+
+电子保单多人下载       wap改版
+
+网销测试环境：							  
+		
+数据库服务器		Oracle 11.2.0.3		10.196.13.12	主机：oracle\Fg^36&17	orcldb	1521	数据库：cictest\to3XQ8Ky sys/j6F2N4D2 
+中间件应用服务器	Websphere 7.0.0.25	10.196.21.39	主机：was\ZBVu5gfD		9043	
+DMZ互联应用服务器	Apache			10.196.112.35	主机：apache\VAc3K$5K					
+https://10.196.21.39:9043/ibm/console/logon.jsp
+控制台：was\002lTC#I
+
+MQ服务器：10.196.21.13		user1/u4Gf47+z  root/r<J7Tg5G
+
+
+order
