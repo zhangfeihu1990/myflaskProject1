@@ -2,6 +2,7 @@
 #http://www.mongoalchemy.org/intro.html
 #http://api.mongodb.com/python/current/tools.html
 #https://pypi.python.org/pypi
+#https://boto3.readthedocs.io/en/latest/guide/quickstart.html
 from pymongo import MongoClient
 import datetime
 import pprint
