@@ -59,7 +59,7 @@ def scrape_ajax():
           template_url=template_url.format(letter,page)
           #data={'term':letter,'page':page}
           #template_url=template_url % data
-          html = download(template_url,scrape_callback=ScrapeCallback())
+          html = download(template_url)
           ajax = json.loads(html)
           for record in ajax['records']:
               countries.add(record['country'])

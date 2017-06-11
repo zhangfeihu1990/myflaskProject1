@@ -3,6 +3,10 @@
 #http://api.mongodb.com/python/current/tools.html
 #https://pypi.python.org/pypi
 #https://boto3.readthedocs.io/en/latest/guide/quickstart.html
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 from pymongo import MongoClient
 import datetime
 import pprint
@@ -15,13 +19,13 @@ from bson.codec_options import CodecOptions
 
 import sqlalchemy_declarative
 
-# client = MongoClient('localhost',27017)
-# db = client['runoob']
-# post = {"author":"mike",
-#         "text": "my first blog post",
-#         "data": datetime.datetime.utcnow()
-#
-# }
+client = MongoClient('localhost',27017)
+db = client['runoob']
+post = {"author":"mike34",
+        "text": "my first blog post",
+        "data": datetime.utcnow()
+
+}
 # posts = db.posts
 # post_id = posts.insert_one(post).inserted_id
 # print post_id
@@ -37,12 +41,16 @@ session = Session.connect('runoob')
 session.clear_collection(Student)
 
 #student = Student(name=unicode('注TETE', 'utf-8'),age=20)
-student = Student(name='注水晶',age=20)
+student = Student(name='注水晶89',age=20)
 print student.name
 session.save(student)
+session
+#
+# import sys
+# print sys.getdefaultencoding()
 
-import sys
-print sys.getdefaultencoding()
+
+
 
 # 1．问题描述：一个在Django框架下使用Python编写的定时更新项目，在Windows系统下测试无误，在Linux系统下测试，报如下错误：
 # ascii codec can't decode byte 0xe8 in position 0:ordinal not in range(128)

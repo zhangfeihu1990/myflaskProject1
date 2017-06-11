@@ -12,7 +12,7 @@ driver = webdriver.Firefox()
 # print countries
 
 
-driver.get("http://www.ziroom.com/z/nl/z3-x1-a2-s5%E5%8F%B7%E7%BA%BF-t%E5%A4%A9%E9%80%9A%E8%8B%91%E5%8D%97.html")
+driver.get("https://www.washingtonpost.com/")
 links = driver.find_element_by_css_selector('#houseList a.t1')
 print links
 # for link in links:
