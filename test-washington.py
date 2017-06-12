@@ -58,7 +58,7 @@ def get_news_content(url):
 
 #crow_cnn()
 
-#获取首页中所有新闻的url
+#获取首页中所有新闻的urlL
 def get_news_url(url,site):
     html = download(url)     #获取网站首页
     soup = BeautifulSoup(html,"html.parser")
