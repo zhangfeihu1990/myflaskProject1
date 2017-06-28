@@ -1,0 +1,40 @@
+张飞虎
+账号：zhangfeihu
+密码：fg4Fz_Vzu70u                   wljw1688
+
+REQ2105#[FC] 增加电梯产品代码 by张飞虎
+http://10.196.112.6:9080/web/
+4380880000000007
+http://219.141.211.14:9777/amoeba/login?year=&month=
+
+http://100.39.3.42:9999/zentao/project-bug-26-status,id_desc-0-120-20-1.html
+
+http://www.phaser-china.com/
+
+bin>
+mongod.exe --dbpath d:\data\db
+
+ubuntu安装flask流程
+$ sudo apt-get install python-virtualenv
+安装Flask
+
+安装了virutalenv后，就可以创建一个新的相关环境：
+
+$ virtualenv enve
+这里virtualenv创建了一个文件夹，flaskapp/，并且设置了一个纯净的python拷贝，同时安装了包管理器pip。
+
+进入新创建的开发环境并激活：（注意第二行period与bin之间有一个空格）
+
+
+$ . enve/bin/activate
+接下来就可以安全地安装Flask了：
+
+$ pip install Flask
+
+http://www.tuicool.com/articles/7ryyU3n
+
+IT TUSHU
+http://vdisk.weibo.com/s/Dfe6-70sgBWYj?category_id=12&parents_ref=Dfe6-70sgBW_w
+added at yichengdongyuan
+added again
+added another one
